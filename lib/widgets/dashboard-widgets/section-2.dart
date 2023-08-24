@@ -8,7 +8,7 @@ class sectionTwo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 230,
+      height: 270,
       width: 380,
       padding: EdgeInsets.all(20),
       decoration: BoxDecoration(

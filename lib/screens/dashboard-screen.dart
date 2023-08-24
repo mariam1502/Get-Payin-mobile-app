@@ -10,10 +10,18 @@ class DashBoardScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double quarterHeight = MediaQuery.of(context).size.height * 0.25;
+    double quarterHeight = MediaQuery.of(context).size.height * 0.15;
     double quarterWidth = MediaQuery.of(context).size.width * 0.25;
     return Scaffold(
-        appBar: AppBar(title: Text(' ')),
+        appBar: AppBar(
+          iconTheme: IconThemeData(color: Colors.white),
+          title: Text(
+            'Dash Board',
+            style: TextStyle(
+                fontSize: 35, fontWeight: FontWeight.bold, color: Colors.white),
+          ),
+          backgroundColor: Color(0xFF009C95),
+        ),
         drawer: DrawerWidget(),
         body: Column(
           children: [
@@ -22,19 +30,13 @@ class DashBoardScreen extends StatelessWidget {
                     .size
                     .width, // Set width to screen width
                 height: MediaQuery.of(context).size.height *
-                    0.3, // Set height to screen height
+                    0.25, // Set height to screen height
                 child: sectionOne(quarterHeight: quarterHeight)),
             SizedBox(
-              height: 35,
+              height: 10,
             ),
             sectionTwo(),
-            SizedBox(
-              height: 20,
-            ),
             sectionaThree(),
-            SizedBox(
-              height: 20,
-            ),
           ],
         ));
   }

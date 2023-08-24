@@ -10,19 +10,13 @@ class sectionOne extends StatelessWidget {
       alignment: Alignment.topCenter,
       children: [
         Container(
-            padding: EdgeInsets.fromLTRB(20, 20, 20, 0),
-            width: MediaQuery.of(context).size.width,
-            height: quarterHeight,
-            color: Color(0xFF009C95),
-            child: Text(
-              'Dash Board',
-              style: TextStyle(
-                  fontSize: 35,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.white),
-            )),
+          padding: EdgeInsets.fromLTRB(20, 20, 20, 0),
+          width: MediaQuery.of(context).size.width,
+          height: quarterHeight,
+          color: Color(0xFF009C95),
+        ),
         Positioned(
-            bottom: 0,
+            top: 15,
             child: Container(
               padding: EdgeInsets.fromLTRB(20, 20, 20, 0),
               height: 170,

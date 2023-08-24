@@ -19,6 +19,7 @@ class sectionaThree extends StatelessWidget {
             Container(
                 padding: EdgeInsets.all(10),
                 width: 175,
+                height: 120,
                 decoration: BoxDecoration(
                   boxShadow: [
                     BoxShadow(
@@ -56,6 +57,7 @@ class sectionaThree extends StatelessWidget {
             Container(
               padding: EdgeInsets.all(10),
               width: 175,
+              height: 120,
               decoration: BoxDecoration(
                 boxShadow: [
                   BoxShadow(
