@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get_payin/screens/dashboard-screen.dart';
+import '../screens/customers-screen.dart';
 
 class BottomNav extends StatefulWidget {
   const BottomNav({super.key});
@@ -12,6 +13,7 @@ class _BottomNavState extends State<BottomNav> {
   int _selectedIndex = 0;
 
   static const List<Widget> _pages = <Widget>[
+    CustomerScreen(),
     DashBoardScreen(),
     Text('Second Page'),
     Text('Third Page')

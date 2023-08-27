@@ -12,6 +12,7 @@ import '../screens/report-screen.dart';
 import '../screens/setting-screen.dart';
 import '../screens/vendors-screen.dart';
 import '../widgets/bottom_nav.dart';
+import '../screens/customers-details-screen.dart';
 
 class MyRoutes {
   final GoRouter myrouter = GoRouter(
@@ -26,6 +27,12 @@ class MyRoutes {
             path: 'customers',
             builder: (BuildContext context, GoRouterState state) {
               return const CustomerScreen();
+            },
+          ),
+          GoRoute(
+            path: 'customers-details',
+            builder: (BuildContext context, GoRouterState state) {
+              return const CustomerDetailsScreen();
             },
           ),
           GoRoute(
