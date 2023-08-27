@@ -13,7 +13,14 @@ class _CustomerDetailsScreenState extends State<CustomerDetailsScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(title: Text('Customer Details')),
+        appBar: AppBar(
+          iconTheme: IconThemeData(color: Colors.white),
+          title: Text(
+            'Customer Details',
+            style: TextStyle(color: Colors.white),
+          ),
+          backgroundColor: Color(0xFF009C95),
+        ),
         body: Stack(
           children: [
             // Your main content here
@@ -35,11 +42,13 @@ class _CustomerDetailsScreenState extends State<CustomerDetailsScreen> {
               right: 20, // Adjust the position as needed
 
               child: FloatingActionButton(
+                backgroundColor: Colors.white,
                 onPressed: () {
                   // Handle button 2 press
                 },
                 child: Icon(
                   Icons.edit,
+                  color: Color(0xFF009C95),
                 ),
               ),
             ),

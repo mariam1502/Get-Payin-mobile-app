@@ -9,59 +9,55 @@ class CustomerScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-          backgroundColor: Color(0xFF009C95),
-          title: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Text(
-                'Customers',
-                style: TextStyle(color: Colors.white),
-              ),
-              IconButton(
-                icon: Icon(
-                  Icons.search,
-                  color: Colors.white,
-                ),
-                onPressed: () {},
-              )
-            ],
-          )),
-      body: Column(
-        children: [
-          Center(
-            child: Row(
+        appBar: AppBar(
+            iconTheme: IconThemeData(color: Colors.white),
+            backgroundColor: Color(0xFF009C95),
+            title: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Expanded(
-                  child: ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      primary: Colors.green, // Set the button color to green
-                    ),
-                    onPressed: () {},
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Icon(
-                          Icons.add,
-                          color: Colors.white,
-                        ),
-                        SizedBox(
-                          width: 10,
-                        ),
-                        Text(
-                          'Create Customer',
-                          style: TextStyle(color: Colors.white),
-                        )
-                      ],
-                    ),
-                  ),
+                Text(
+                  'Customers',
+                  style: TextStyle(color: Colors.white),
                 ),
+                IconButton(
+                  icon: Icon(
+                    Icons.search,
+                    color: Colors.white,
+                  ),
+                  onPressed: () {},
+                )
               ],
+            )),
+        body: Stack(
+          children: [
+            // Your main content here
+            Padding(
+              padding: const EdgeInsets.all(20.0),
+              child: ListView(
+                children: [
+                  for (int index = 0; index < 2; index++)
+                    CustomerData(), // Replace with your actual AddRow widget
+                ],
+              ),
             ),
-          ),
-          customerData()
-        ],
-      ),
-    );
+
+            // Sticky Button 2
+            Positioned(
+              bottom: 20, // Adjust the position as needed
+              right: 20, // Adjust the position as needed
+
+              child: FloatingActionButton(
+                backgroundColor: Colors.white,
+                onPressed: () {
+                  // Handle button 2 press
+                },
+                child: Icon(
+                  Icons.add,
+                  color: Color(0xFF009C95),
+                ),
+              ),
+            ),
+          ],
+        ));
   }
 }
